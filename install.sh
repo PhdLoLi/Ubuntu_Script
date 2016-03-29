@@ -2,6 +2,10 @@
 sudo adduser lijing
 sudo adduser lijing sudo
 #install config file 
+sudo apt-get install git
+git config --global user.name "lijing"
+git config --global user.email "OoOfreedom@gmail.com"
+
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bk
 sudo cp 163_sources.list /etc/apt/sources.list
 
@@ -38,7 +42,6 @@ sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:named-data/ppa
 sudo apt-get update
 sudo apt-get install nfd
-sudo apt-get install git
 sudo apt-get install build-essential
 sudo apt-get install libsqlite3-dev libcrypto++-dev
 
