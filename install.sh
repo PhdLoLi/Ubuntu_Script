@@ -2,7 +2,9 @@
 sudo adduser lijing
 sudo adduser lijing sudo
 #install config file 
-sudo cp sources.list /etc/apt/
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.bk
+sudo cp 163_sources.list /etc/apt/sources.list
+
 cp .vimrc ../
 cp -r .vim ../
 cp .tmux.conf ../
@@ -14,10 +16,10 @@ cp authorized_keys ../.ssh
 
 #change hostname & ip
 #hostname two files
-sudo cat 222.92.116.123 sznode1 >> /etc/hosts 
-sudo cat 222.92.116.122 sznode0 >> /etc/hosts 
-sudo cat 222.92.116.116 sznode >> /etc/hosts 
-sudo cat 222.92.116.115 sz >> /etc/hosts 
+#sudo cat 222.92.116.123 sznode1 >> /etc/hosts 
+#sudo cat 222.92.116.122 sznode0 >> /etc/hosts 
+#sudo cat 222.92.116.116 sznode >> /etc/hosts 
+#sudo cat 222.92.116.115 sz >> /etc/hosts 
 
 sudo apt-get install exuberant-ctags
 sudo apt-get install tmux
@@ -44,7 +46,7 @@ sudo apt-get install libsqlite3-dev libcrypto++-dev
 sudo apt-get install ufw
 sudo ufw allow ssh
 sudo ufw allow from 222.92.116.122
-sudo ufw allow from 222.92.116.122
+sudo ufw allow from 222.92.116.123
 sudo ufw enable
 
 #harden ssh login
